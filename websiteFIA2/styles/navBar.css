@@ -1,0 +1,44 @@
+.signInRow {
+  text-align: right;
+  line-height: 22.4px;
+  height: 38px;
+}
+.signInLink {
+  font-size: 16px;
+  text-align: center;
+  text-decoration-line: none;
+  text-decoration-color: black;
+  color: black;
+  font-family: sans-serif;
+  vertical-align: middle;
+}
+.signIn {
+  height: 100%;
+  width: 8%;
+  float: right;
+  text-align: center;
+}
+.dropdownArrow {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+.headerTop,
+.headerBottom {
+  background-color: rgb(128, 0, 0);
+}
+.headerTop {
+  height: 150px;
+}
+.headerTop1 {
+  height: 50px;
+}
+.headerTop2 {
+  height: 100px;
+}
+.headerBottom {
+  height: 49px;
+}
