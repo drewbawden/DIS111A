@@ -3,18 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Toolooa State High School Tuckshop</title>
-    <link rel="stylesheet" href="styles/navBar.css" />
-    <!-- Latest compiled and minified CSS -->
+    <title>Tuckshop</title>
+    <link rel="stylesheet" href="styles/header.css" />
+    <script src="js/search.js"></script>
+    <!-- we dont need bootstrap 
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-
-    <!-- Latest compiled JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> -->
   </head>
   <body>
+    <!-- apparently the sign in bar doesn't appear outside of the EQ network :( -->
+    <!-- 
     <div class="container-fluid">
       <div class="row signInRow">
         <div class="col-md-11">
@@ -26,23 +27,184 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="container-fluid">
-      <div class="row headerTop">
-        <div class="col">
-          <div class="container">
-            <div class="row headerTop1"></div>
-            <div class="row headerTop2"></div>
+    </div> 
+    -->
+    <!-- i dont want to use boostrap anymore why; use high level when i work better lower level -->
+    <header>
+      <div class="headerContainer">
+        <div class="headerRowOne">
+          <div class="headerItemsContainer">
+            <span>
+              <a href="https://toolooashs.eq.edu.au/">Home</a>
+              <a href="https://toolooashs.eq.edu.au/site-map">Site Map</a>
+              <a href="https://toolooashs.eq.edu.au/our-school/contact-us"
+                >Contact us</a
+              ></span
+            >
+          </div>
+        </div>
+        <div class="headerRowTwo">
+          <div class="headerItemsContainer" id="brandHIC">
+            <a href="https://toolooashs.eq.edu.au/" class="homeLink"
+              ><div class="brandingContainer">
+                <div class="logoContainer">
+                  <img
+                    src="images/sitelogo.png"
+                    alt="Toolooa State High School logo"
+                  />
+                </div>
+                <div class="nameContainer">
+                  <div class="title">Toolooa State High School</div>
+                  <div class="motto">Education for life</div>
+                </div>
+              </div></a
+            >
+          </div>
+          <div class="headerItemsContainer" id="searchHIC">
+            <div class="searchContainer">
+              <input
+                type="text"
+                name="search"
+                id="searchInput"
+                placeholder="Enter a search term"
+              />
+              <a onclick="searchWebsite()">
+                <img src="images/searchIcon.png" alt="search" />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="headerRowThree">
+          <div class="headerItemsContainer" id="searchHIC">
+            <nav id="pageNav">
+              <div>
+                <ul id="navList">
+                  <li class="navItem">
+                    <a class="navOption" href=""><span>Our school</span></a>
+                    <div class="dropdownContent">
+                      <ul>
+                        <li>
+                          <a href="">Principal's welcome</a>
+                        </li>
+                        <li>
+                          <a href="">History</a>
+                        </li>
+                        <li>
+                          <a href="">Why choose our school?</a>
+                        </li>
+                        <li>
+                          <a href="">Missions and values</a>
+                        </li>
+                        <li>
+                          <a href="">Performance and achievements</a>
+                        </li>
+                        <li>
+                          <a href="">Rules and policies</a>
+                        </li>
+                        <li>
+                          <a href="">Our staff</a>
+                        </li>
+                        <li>
+                          <a href="">Maps and transport</a>
+                        </li>
+                        <li>
+                          <a href="">Class times</a>
+                        </li>
+                        <li>
+                          <a href="">Contact us</a>
+                        </li>
+                        <li>
+                          <a href="">Link and Launch Program</a>
+                        </li>
+                        <li>
+                          <a href="">Remote learning</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="navItem">
+                    <a class="navOption" href=""><span>Enrolments</span></a>
+                    <div class="dropdownContent">
+                      <ul>
+                        <li><a href="">Encrolling at our school</a></li>
+                        <li><a href="">Catchment area</a></li>
+                        <li><a href="">Booklists</a></li>
+                        <li><a href="">Enrolment Forms</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="navItem">
+                    <a class="navOption" href=""><span>Curriculum</span></a>
+                    <div class="dropdownContent">
+                      <ul>
+                        <li><a href="">Subjects and programs</a></li>
+                        <li><a href="">Bring Your Own Device</a></li>
+                        <li><a href="">Junior secondary</a></li>
+                        <li><a href="">Senior secondary</a></li>
+                        <li><a href="">Testing and assessment</a></li>
+                        <li><a href="">Tertiary programs</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="navItem">
+                    <a class="navOption" href=""
+                      ><span>Extra-curricular</span></a
+                    >
+                    <div class="dropdownContent">
+                      <ul>
+                        <li><a href="">Sports</a></li>
+                        <li><a href="">Clubs</a></li>
+                        <li><a href="">Religious instruction</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="navItem">
+                    <a class="navOption" href=""><span>Facilities</span></a>
+                    <div class="dropdownContent">
+                      <ul>
+                        <li><a href="">Library</a></li>
+                        <li><a href="">Tuckshop</a></li>
+                        <li><a href="">Uniform shop</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="navItem">
+                    <a class="navOption" href=""
+                      ><span>Calendar and news</span></a
+                    >
+                    <div class="dropdownContent">
+                      <ul>
+                        <li><a href="">Term dates</a></li>
+                        <li><a href="">Events calendar</a></li>
+                        <li><a href="">Sports day</a></li>
+                        <li><a href="">Swimming carnival</a></li>
+                        <li><a href="">News</a></li>
+                        <li><a href="">Newsletters</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="navItem">
+                    <a class="navOption" href=""
+                      ><span>Support and resources</span></a
+                    >
+                    <div class="dropdownContent">
+                      <ul>
+                        <li><a href="">Forms and documents</a></li>
+                        <li><a href="">Student resources</a></li>
+                        <li><a href="">Parent resources</a></li>
+                        <li><a href="">Payments</a></li>
+                        <li>
+                          <a href="">Student services and support programs</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </nav>
           </div>
         </div>
       </div>
-      <div class="row headerBottom">
-        <div class="col">
-          <div class="container">
-            <div class="row"></div>
-          </div>
-        </div>
-      </div>
-    </div>
+    </header>
   </body>
 </html>

@@ -1,0 +1,221 @@
+/* styling for unused sign in bar
+
+.signInRow {
+  text-align: right;
+  line-height: 22.4px;
+  height: 38px;
+}
+.signInLink {
+  font-size: 16px;
+  text-align: center;
+  text-decoration-line: none;
+  text-decoration-color: black;
+  color: black;
+  font-family: sans-serif;
+  vertical-align: middle;
+}
+.signIn {
+  height: 100%;
+  width: 8%;
+  float: right;
+  text-align: center;
+}
+.dropdownArrow {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg); 
+*/
+
+body{
+  font-family: sans-serif;
+  color: white;
+  margin: 0;
+}
+.headerRowOne, .headerRowTwo, .headerRowThree{
+  background-color: rgb(128,0,0);
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  text-align: center;
+  font-size: 14px;
+  justify-content: space-between;
+}
+.headerItemsContainer span a{
+  text-decoration: none;
+  padding-left: 20px;
+  color: white;
+}
+.headerItemsContainer span a:hover{
+  text-decoration: underline;
+}
+.headerRowOne{
+  height: 47px;
+  justify-content: flex-end;
+}
+.headerRowOne .headerItemsContainer{
+  margin-right: 14%;
+  width: 240px;
+  position: relative;
+}
+.headerRowOne .headerItemsContainer span{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.headerRowTwo{
+  height: 103px;
+}
+#brandHIC{
+  margin-left: 14%;
+  width: 400px;
+}
+.brandingContainer{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.logoContainer{
+  width: 130px;
+  position: relative;
+}
+.logoContainer img {
+  max-height: 130px;
+  position: absolute;
+  right: 0;
+  top: -75%;
+}
+.homeLink{
+  text-decoration: none;
+}
+.homeLink:hover{
+  text-decoration: underline;
+  text-decoration-color: white;
+}
+.nameContainer{
+  width: 264px;
+  text-align: left;
+}
+.nameContainer .title{
+  font-size: 19.6px;
+  padding-left: 10px;
+  color: white;
+}
+.nameContainer .motto{
+  font-size: 14px;
+  padding-left: 10px;
+  color: white;
+}
+#searchHIC{
+  margin-right: 8%;
+}
+.searchContainer {
+  width: 342px;
+  margin-top: 10px;
+  display: flex;
+  border: 1px solid white;
+}
+.searchContainer input{
+  float: left;
+  height: 40px;
+  width: 260px;
+  padding-left: 12px;
+  border: none;
+}
+.searchContainer a{
+  background-color:rgb(221,221,221);
+  width: 68px;
+  position: relative;
+}
+.searchContainer a img{
+  position: absolute;
+  left: 30%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 25px;
+}
+.searchContainer a:hover{
+  background-color: rgb(128,0,0);
+}
+.searchContainer a:active{
+  background-color: rgb(150,0,0);
+}
+.headerRowThree{
+  height: 49px;
+}
+.headerRowThree .headerItemsContainer{
+  margin-left: 8%;
+}
+#pageNav{
+  height: 49px;
+}
+#pageNav div{
+  height: 49px;
+}
+#navList{
+  padding: 0;
+  margin: 0;
+  height: 49px;
+  display: flex;
+}
+.navItem{
+  display: inline-block;
+  font-size: 14px;
+  height: 49px;
+  position: relative;
+}
+.navOption{
+  text-decoration: none;
+  color: white;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.navOption:hover{
+  transition-duration: 0.1s;
+  background-color: white;
+  color: rgb(128,0,0);
+  text-decoration: underline;
+}
+.navOption span {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.dropdownContent{
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  display: block;
+}
+.dropdownContent ul{
+  margin: 0;
+  padding: 0;
+  width: auto;
+}
+.dropdownContent li{
+  display: block;
+}
+.dropdownContent a{
+  color: white;
+  background-color: rgb(128,0,0);
+  padding: 7px 14px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  text-wrap: nowrap;
+}
+.dropdownContent a:hover{
+  transition-duration: 0.05s;
+  text-decoration: underline;
+  background-color: white;
+  color: rgb(128,0,0);
+}
+.navItem:hover .dropdownContent{
+  transition: opacity 0.1s linear;
+  visibility: visible;
+  opacity: 1;
+}
