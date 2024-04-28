@@ -31,69 +31,67 @@ function setChanges(products) {
       } else if (x == 1) {
         parentID = "priceDropsParent";
       }
-      appendHTML(
-        (parentID = parentID),
-        (id = products[x][y].id),
-        (name = products[x][y].name),
-        (price = originalPrice),
-        (markdownPrice = markdownPrice),
-        (special = products[x][y].special)
-      );
+      appendHTML({
+        parentID: parentID,
+        id: products[x][y].id,
+        name: products[x][y].name,
+        price: originalPrice,
+        markdownPrice: markdownPrice,
+        special: products[x][y].special,
+      });
     }
   }
   // add remaining products
   parentID = "newProductsParent";
   for (let x = 0; x < products[2].length; x++) {
-    appendHTML(
-      (parentID = parentID),
-      (id = products[2][x].id),
-      (name = products[2][x].name),
-      (price = products[2][x].price),
-      (special = products[2][x].special)
-    );
+    appendHTML({
+      parentID: parentID,
+      id: products[2][x].id,
+      name: products[2][x].name,
+      price: products[2][x].price,
+      special: products[2][x].special,
+    });
   }
 }
 
-function appendHTML(parentID, id, name, price, markdownPrice, special) {
-  let priceStr = `<i>$${price}</i>`;
+function appendHTML(menuItem) {
+  let priceStr = `<i>$${menuItem.price}</i>`;
   let specialLogo = "";
 
   // check if has price markdown
-  if (markdownPrice) {
-    priceStr = `<s>$${price}</s> <i>$${markdownPrice}</i>`;
+  if (menuItem.markdownPrice) {
+    priceStr = `<s>$${menuItem.price}</s> <i>$${menuItem.markdownPrice}</i>`;
   }
 
   // add special logos
-  if (special) {
-    if (special == "gluten") {
-      specialLogo = `<img src="images/glutenFreeLogo.png" alt="" class="glutenLogo" />`;
-    } else if (special == "vegan") {
-      specialLogo = `<img src="images/veganLogo.png" alt="" class="veganLogo" />`;
-    } else if (special == "both") {
-      specialLogo = `
+  if (menuItem.special == "gluten") {
+    specialLogo = `<img src="images/glutenFreeLogo.png" alt="" class="glutenLogo" />`;
+  } else if (menuItem.special == "vegan") {
+    specialLogo = `<img src="images/veganLogo.png" alt="" class="veganLogo" />`;
+  } else if (menuItem.special == "both") {
+    specialLogo = `
       <img src="images/glutenFreeLogo.png" alt="" class="glutenLogo" />
       <img src="images/veganLogo.png" alt="" class="veganLogo" />
       `;
-    }
   }
 
   const htmlContent = `
   <div class="productContainer">
   <img
-    src="images/products/${id}.png"
-    alt="${name}"
+    src="images/products/${menuItem.id}.png"
+    alt="${menuItem.name}"
     class="productImage"
     />
     ${specialLogo}
     <div>
-    <p class="productName">${name}</p>
+    <p class="productName">${menuItem.name}</p>
     <p class="productPrice">${priceStr}</p>
     </div>
   </div>
     `;
 
   // append html inside container
-  const parentDiv = document.getElementById(parentID);
+  const parentDiv = document.getElementById(menuItem.parentID);
   parentDiv.innerHTML += htmlContent;
 }
 
