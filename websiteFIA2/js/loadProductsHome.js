@@ -55,12 +55,12 @@ function setChanges(products) {
 }
 
 function appendHTML(menuItem) {
-  let priceStr = `<i>$${menuItem.price}</i>`;
+  let priceStr = `$${menuItem.price}`;
   let specialLogo = "";
 
   // check if has price markdown
   if (menuItem.markdownPrice) {
-    priceStr = `<s>$${menuItem.price}</s> <i>$${menuItem.markdownPrice}</i>`;
+    priceStr = `<i><s>$${menuItem.price}</s></i> $${menuItem.markdownPrice}`;
   }
 
   // add special logos
