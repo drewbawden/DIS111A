@@ -6,7 +6,7 @@ function chooseProducts() {
   // loop through 3 categories
   for (let x = 0; x < 3; x++) {
     let prodList = [];
-    const productCount = Math.floor(Math.random() * 6) + 3; // random product count 3-8 per category
+    const productCount = Math.floor(Math.random() * 4) + 3; // random product count 3-6 per category
     for (let y = 0; y < productCount; y++) {
       const productIndex = Math.floor(Math.random() * allProducts.length);
       prodList.push(allProducts[productIndex]);
@@ -77,7 +77,7 @@ function appendHTML(menuItem) {
 
   const htmlContent = `
   <div class="productContainer">
-  <img
+    <img
     src="images/products/${menuItem.id}.png"
     alt="${menuItem.name}"
     class="productImage"

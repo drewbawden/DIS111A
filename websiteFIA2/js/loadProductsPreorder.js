@@ -17,6 +17,11 @@ function loadProducts() {
 
 function appendHTML(menuItem) {
   let specialLogo = "";
+  let nameIdStr = "";
+  let priceIdStr = "";
+  let itemCount = "";
+  let buttonContainerOpen = "";
+  let buttonContainerClose = "";
 
   // add special logos
   if (menuItem.special == "gluten") {
@@ -30,20 +35,30 @@ function appendHTML(menuItem) {
     `;
   }
 
+  // check if adding to cart
+  if (menuItem.textID) {
+    nameIdStr = `id="${menuItem.textID + "CartName"}"`;
+    priceIdStr = `id="${menuItem.textID + "CartPrice"}"`;
+    itemCount = "<br>x 1";
+  } else {
+    buttonContainerOpen = `<button class="cartContainerBtn" onClick="addToCart('${menuItem.id}')">`;
+    buttonContainerClose = "</button>";
+  }
+
   const htmlContent = `
   <div class="productContainer">
-  <button class="cartContainerBtn" onClick="addToCart('${menuItem.id}, ${menuItem.price}')">
-  <img
+    ${buttonContainerOpen}
+      <img
       src="images/products/${menuItem.id}.png"
       alt="${menuItem.name}"
       class="productImage"
       />
       ${specialLogo}
       <div>
-      <p class="productName">${menuItem.name}</p>
-      <p class="productPrice">$${menuItem.price}</p>
+      <p ${nameIdStr} class="productName">${menuItem.name}${itemCount}</p>
+      <p ${priceIdStr} class="productPrice">$${menuItem.price}</p>
       </div>
-    </button>
+    ${buttonContainerClose}
   </div>
     `;
 

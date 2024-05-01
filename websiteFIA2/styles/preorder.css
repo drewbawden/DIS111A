@@ -3,6 +3,7 @@
   flex-direction: row;
   flex-wrap: nowrap;
   background-color: green;
+  justify-content: space-between;
 }
 .productInfoContainer {
   display: flex;
@@ -21,9 +22,12 @@
 }
 .cartContainer {
   background-color: orange;
-  text-align: center;
   width: 10%;
 }
+.cartHeader {
+  text-align: center;
+}
+
 .productsList {
   display: flex;
   flex-direction: row;
