@@ -1,5 +1,96 @@
-body {
-  background-color: white;
-  font-family: sans-serif;
+.mainBody {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  background-color: green;
+}
+.productInfoContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 60%;
+  padding: 0 7px;
+  background-color: purple;
+}
+.listsContainer {
+  overflow: hidden;
+  text-align: center;
+  background-color: red;
+  flex: 1;
+  margin: 0 7px;
+}
+.cartContainer {
+  background-color: orange;
+  text-align: center;
+  width: 10%;
+}
+.productsList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.productContainer {
+  background-color: rgb(128, 0, 0);
+  width: 100px;
+  margin: 20px;
+  border-radius: 3%;
+  box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.7);
+  position: relative;
+}
+.productImage {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  margin: 5%;
+  margin-bottom: 0;
+  border-radius: 20%;
+  position: relative;
+}
+.glutenLogo {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: 5px;
+  top: 5px;
+}
+.veganLogo {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  border: 2px rgba(0, 0, 0, 0.4) solid;
+  width: 25px;
+  height: 25px;
+  left: 5px;
+  top: 5px;
+}
+.productContainer div {
   margin: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.productName,
+.productPrice {
+  margin: 0 5%;
+  margin-bottom: 5%;
+  font-size: 15px;
+  text-align: center;
+  border-radius: 10%;
+  width: 100%;
+}
+.productName {
+  align-self: flex-start;
+  background-color: rgb(105, 0, 0);
+  color: white;
+}
+.productPrice {
+  align-self: flex-end;
+  background-color: rgb(105, 0, 0);
+  color: white;
+}
+.productPrice s,
+.productPrice i {
+  padding: 0 3%;
 }
