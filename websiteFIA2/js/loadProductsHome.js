@@ -77,16 +77,18 @@ function appendHTML(menuItem) {
 
   const htmlContent = `
   <div class="productContainer">
-    <img
-    src="images/products/${menuItem.id}.png"
-    alt="${menuItem.name}"
-    class="productImage"
-    />
-    ${specialLogo}
-    <div>
-    <p class="productName">${menuItem.name}</p>
-    <p class="productPrice">${priceStr}</p>
-    </div>
+    <button class="cartContainerBtn" onClick="location.href='preorder.html?product=${menuItem.id}'")">
+      <img
+      src="images/products/${menuItem.id}.png"
+      alt="${menuItem.name}"
+      class="productImage"
+      />
+      ${specialLogo}
+      <div>
+      <p class="productName">${menuItem.name}</p>
+      <p class="productPrice">${priceStr}</p>
+      </div>
+    </button>
   </div>
     `;
 

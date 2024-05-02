@@ -67,7 +67,14 @@ function appendHTML(menuItem) {
   parentDiv.innerHTML += htmlContent;
 }
 
+function loadFromURL() {
+  const params = new URLSearchParams(window.location.search);
+  const productID = params.get("product");
+  addToCart(productID);
+}
+
 window.addEventListener("DOMContentLoaded", function () {
   // DOM has loaded, begin script
   loadProducts();
+  loadFromURL();
 });

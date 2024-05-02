@@ -1,9 +1,10 @@
-let cartTotal = 0;
 let cartContents = [];
+let priceTotal = 0;
 const allProducts = [hotFood].concat([coldFood], [drinks]);
 
 function addToCart(id) {
   let product;
+  // find product with ID
   for (let x = 0; x < 3; x++) {
     product = allProducts[x].find((obj) => {
       return obj.id === id;
@@ -38,4 +39,11 @@ function addToCart(id) {
       textID: product.id,
     });
   }
+  priceTotal += parseFloat(product.price);
+}
+
+function clearCart() {
+  cartContents = [];
+  priceTotal = 0;
+  document.getElementById("cartContents").innerHTML = "";
 }

@@ -91,3 +91,17 @@
   height: 20px;
   padding: 0 5px;
 }
+.cartContainerBtn {
+  background-color: rgb(128, 0, 0);
+  border: none;
+  border-radius: 5px;
+  transition-duration: 0.3s;
+  height: 100%;
+}
+.cartContainerBtn:hover {
+  background-color: rgb(145, 0, 0);
+  box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.7);
+  box-shadow: -4px -4px 5px rgba(145, 0, 0, 0.7);
+  transform: translate(7%, 7%);
+  transition-duration: 0.3s;
+}
