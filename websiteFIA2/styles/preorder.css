@@ -2,113 +2,41 @@
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  background-color: green;
   justify-content: space-between;
 }
-.productInfoContainer {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+.productListContainer {
   width: 60%;
-  padding: 0 7px;
-  background-color: purple;
+}
+.productContainerName {
+  background-color: rgb(156, 152, 152);
+  text-align: center;
+  font-size: 20px;
+  padding: 5px 10px;
+  border-radius: 5px;
 }
 .listsContainer {
   overflow: hidden;
   text-align: center;
-  background-color: red;
-  flex: 1;
-  margin: 0 7px;
+  background-color: rgb(241, 241, 241);
+  border-radius: 5px;
+  margin: 14px 14px;
 }
 .cartContainer {
-  background-color: orange;
-  width: 10%;
-}
-.cartHeader {
   text-align: center;
+  background-color: rgb(241, 241, 241);
+  border-radius: 5px;
+  margin: 14px 14px;
+  width: 12%;
 }
-
 .productsList {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  align-items: center;
   justify-content: center;
 }
-.productContainer {
-  background-color: rgb(128, 0, 0);
-  width: 100px;
-  margin: 20px;
-  border-radius: 3%;
-  box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.7);
-  position: relative;
-}
-.productImage {
-  width: 90px;
-  height: 90px;
-  object-fit: contain;
-  margin: 5%;
-  margin-bottom: 0;
-  border-radius: 20%;
-  position: relative;
-}
-.glutenLogo {
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  right: 5px;
-  top: 5px;
-}
-.veganLogo {
-  position: absolute;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 50%;
-  border: 2px rgba(0, 0, 0, 0.4) solid;
-  width: 25px;
-  height: 25px;
-  left: 5px;
-  top: 5px;
-}
-.productContainer div {
-  margin: 0;
+#cartContents {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-.productName,
-.productPrice {
-  margin: 0 5%;
-  margin-bottom: 5%;
-  font-size: 15px;
-  text-align: center;
-  border-radius: 10%;
-  width: 100%;
-}
-.productName {
-  align-self: flex-start;
-  background-color: rgb(105, 0, 0);
-  color: white;
-}
-.productPrice {
-  align-self: flex-end;
-  background-color: rgb(105, 0, 0);
-  color: white;
-}
-.productPrice s,
-.productPrice i {
-  padding: 0 3%;
-}
-.cartContainerBtn {
-  background-color: rgb(128, 0, 0);
-  border: none;
-  border-radius: 5px;
-  transition-duration: 0.3s;
-  height: 100%;
-}
-.cartContainerBtn:hover {
-  background-color: rgb(145, 0, 0);
-  box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.7);
-  box-shadow: -4px -4px 5px rgba(145, 0, 0, 0.7);
-  transform: translate(7%, 7%);
-  transition-duration: 0.3s;
+  flex-direction: column;
+  overflow: auto;
+  align-items: center;
 }

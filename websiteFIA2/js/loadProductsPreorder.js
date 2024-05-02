@@ -70,11 +70,14 @@ function appendHTML(menuItem) {
 function loadFromURL() {
   const params = new URLSearchParams(window.location.search);
   const productID = params.get("product");
-  addToCart(productID);
+  if (productID) {
+    addToCart(productID);
+  }
 }
 
 window.addEventListener("DOMContentLoaded", function () {
   // DOM has loaded, begin script
   loadProducts();
   loadFromURL();
+  cartMaxHeight();
 });

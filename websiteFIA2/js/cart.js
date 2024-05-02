@@ -47,3 +47,15 @@ function clearCart() {
   priceTotal = 0;
   document.getElementById("cartContents").innerHTML = "";
 }
+
+function cartMaxHeight() {
+  // is this unnecessary? maybe
+  // is it so easy that i dont care? yep
+  const listContainer = document.querySelector(".productListContainer");
+  const cartContainer = document.getElementById("cartContents");
+  cartContainer.style.maxHeight = listContainer.offsetHeight - 69 + "px";
+}
+
+window.addEventListener("resize", () => {
+  cartMaxHeight();
+});
