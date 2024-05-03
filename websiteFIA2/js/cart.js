@@ -1,5 +1,6 @@
 let cartContents = [];
 let priceTotal = 0;
+let itemCount = 0;
 const allProducts = [hotFood].concat([coldFood], [drinks]);
 
 function addToCart(id) {
@@ -40,12 +41,18 @@ function addToCart(id) {
     });
   }
   priceTotal += parseFloat(product.price);
+  itemCount++;
+  displayPriceTotal();
+  displayItemCount();
 }
 
 function clearCart() {
   cartContents = [];
   priceTotal = 0;
+  itemCount = 0;
   document.getElementById("cartContents").innerHTML = "";
+  displayPriceTotal();
+  displayItemCount();
 }
 
 function cartMaxHeight() {
@@ -54,6 +61,16 @@ function cartMaxHeight() {
   const listContainer = document.querySelector(".productListContainer");
   const cartContainer = document.getElementById("cartContents");
   cartContainer.style.maxHeight = listContainer.offsetHeight - 69 + "px";
+}
+
+function displayPriceTotal() {
+  const priceDisplay = document.getElementById("priceTotal");
+  priceDisplay.innerHTML = "$" + priceTotal.toFixed(2);
+}
+
+function displayItemCount() {
+  const itemDisplay = document.getElementById("cartItemCount");
+  itemDisplay.innerHTML = itemCount;
 }
 
 window.addEventListener("resize", () => {
