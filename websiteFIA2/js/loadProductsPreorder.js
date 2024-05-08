@@ -41,7 +41,7 @@ function appendHTML(menuItem) {
     priceIdStr = `id="${menuItem.textID + "CartPrice"}"`;
     itemCount = "<br>x 1";
   } else {
-    buttonContainerOpen = `<button class="cartContainerBtn" onClick="addToCart('${menuItem.id}')">`;
+    buttonContainerOpen = `<button class="cartContainerBtn" onclick="addToCart('${menuItem.id}')">`;
     buttonContainerClose = "</button>";
   }
 

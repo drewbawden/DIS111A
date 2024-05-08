@@ -11,6 +11,7 @@
     <script src="js/productData.js"></script>
     <script src="js/loadProductsPreorder.js"></script>
     <script src="js/cart.js"></script>
+    <script src="js/fun.js"></script>
   </head>
   <body>
     <header>
@@ -216,26 +217,36 @@
         </div>
       </div>
       <div class="orderContainer">
-        <div class="orderContainerHeader">Order Details</div>
         <div class="cartDetailsContainer">
           <div class="cartDetailsHeader">Cart Details</div>
           <div class="cartDetails">
             <div class="priceContainer">
               <p id="priceLabel">Price Total</p>
-              <p id="priceTotal">$0</p>
+              <p id="priceTotal">$0.00</p>
             </div>
             <div class="itemCountContainer">
               <div id="cartItemLabel">Items in Cart</div>
               <div id="cartItemCount">0</div>
             </div>
             <div class="clearCartContainer">
-              <button id="clearCartBtn" onClick="clearCart()">
-                clear cart
+              <button id="clearCartBtn" onclick="clearCart()">
+                Clear <br />
+                Cart
               </button>
             </div>
           </div>
         </div>
-        <div class="detailsInputContainer">input field</div>
+        <div class="detailsInputContainer">
+          <div class="detailInputHeader">Order Details</div>
+          <input class="nameInput" type="text" placeholder="Student name" />
+          <select id="breakSelect" name="break">
+            <option value="" disabled selected hidden>Select Break</option>
+            <option value="break1">Break 1</option>
+            <option value="break2">Break 2</option>
+            <option value="break3">Break 3</option>
+          </select>
+          <input type="date" name="date" id="dateSelect" />
+        </div>
         <div class="paymentContainer">payment</div>
       </div>
       <div class="cartContainer">
