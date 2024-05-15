@@ -1,258 +1,244 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pre-order</title>
-    <link rel="stylesheet" href="styles/header.css" />
-    <link rel="stylesheet" href="styles/preorder.css" />
-    <link rel="stylesheet" href="styles/global.css" />
-    <script src="js/search.js"></script>
-    <script src="js/productData.js"></script>
-    <script src="js/loadProductsPreorder.js"></script>
-    <script src="js/cart.js"></script>
-    <script src="js/fun.js"></script>
-  </head>
-  <body>
-    <header>
-      <div class="headerContainer">
-        <div class="headerRowOne">
-          <div class="headerItemsContainer">
-            <span>
-              <a href="https://toolooashs.eq.edu.au/">Home</a>
-              <a href="https://toolooashs.eq.edu.au/site-map">Site Map</a>
-              <a href="https://toolooashs.eq.edu.au/our-school/contact-us"
-                >Contact us</a
-              ></span
-            >
-          </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pre-order</title>
+  <link rel="stylesheet" href="styles/header.css" />
+  <link rel="stylesheet" href="styles/preorder.css" />
+  <link rel="stylesheet" href="styles/global.css" />
+  <script src="js/search.js"></script>
+  <script src="js/productData.js"></script>
+  <script src="js/loadProductsPreorder.js"></script>
+  <script src="js/cart.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="headerContainer">
+      <div class="headerRowOne">
+        <div class="headerItemsContainer">
+          <span>
+            <a href="https://toolooashs.eq.edu.au/">Home</a>
+            <a href="https://toolooashs.eq.edu.au/site-map">Site Map</a>
+            <a href="https://toolooashs.eq.edu.au/our-school/contact-us">Contact us</a>
+          </span>
         </div>
-        <div class="headerRowTwo">
-          <div class="headerItemsContainer" id="brandHIC">
-            <a href="https://toolooashs.eq.edu.au/" class="homeLink"
-              ><div class="brandingContainer">
-                <div class="logoContainer">
-                  <img
-                    src="images/siteLogo.png"
-                    alt="Toolooa State High School logo"
-                  />
-                </div>
-                <div class="nameContainer">
-                  <div class="title">Toolooa State High School</div>
-                  <div class="motto">Education for life</div>
-                </div>
-              </div></a
-            >
-          </div>
-          <div class="headerItemsContainer" id="searchHIC">
-            <div class="searchContainer">
-              <input
-                type="text"
-                name="search"
-                id="searchInput"
-                placeholder="Enter a search term"
-              />
-              <a onclick="searchWebsite()">
-                <img src="images/searchIcon.png" alt="search" />
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="headerRowThree">
-          <div class="headerItemsContainer" id="searchHIC">
-            <nav id="pageNav">
-              <div>
-                <ul id="navList">
-                  <li class="navItem">
-                    <a class="navOption" href=""><span>Our school</span></a>
-                    <div class="dropdownContent">
-                      <ul>
-                        <li>
-                          <a href="">Principal's welcome</a>
-                        </li>
-                        <li>
-                          <a href="">History</a>
-                        </li>
-                        <li>
-                          <a href="">Why choose our school?</a>
-                        </li>
-                        <li>
-                          <a href="">Missions and values</a>
-                        </li>
-                        <li>
-                          <a href="">Performance and achievements</a>
-                        </li>
-                        <li>
-                          <a href="">Rules and policies</a>
-                        </li>
-                        <li>
-                          <a href="">Our staff</a>
-                        </li>
-                        <li>
-                          <a href="">Maps and transport</a>
-                        </li>
-                        <li>
-                          <a href="">Class times</a>
-                        </li>
-                        <li>
-                          <a href="">Contact us</a>
-                        </li>
-                        <li>
-                          <a href="">Link and Launch Program</a>
-                        </li>
-                        <li>
-                          <a href="">Remote learning</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </li>
-                  <li class="navItem">
-                    <a class="navOption" href=""><span>Enrolments</span></a>
-                    <div class="dropdownContent">
-                      <ul>
-                        <li><a href="">Encrolling at our school</a></li>
-                        <li><a href="">Catchment area</a></li>
-                        <li><a href="">Booklists</a></li>
-                        <li><a href="">Enrolment Forms</a></li>
-                      </ul>
-                    </div>
-                  </li>
-                  <li class="navItem">
-                    <a class="navOption" href=""><span>Curriculum</span></a>
-                    <div class="dropdownContent">
-                      <ul>
-                        <li><a href="">Subjects and programs</a></li>
-                        <li><a href="">Bring Your Own Device</a></li>
-                        <li><a href="">Junior secondary</a></li>
-                        <li><a href="">Senior secondary</a></li>
-                        <li><a href="">Testing and assessment</a></li>
-                        <li><a href="">Tertiary programs</a></li>
-                      </ul>
-                    </div>
-                  </li>
-                  <li class="navItem">
-                    <a class="navOption" href=""
-                      ><span>Extra-curricular</span></a
-                    >
-                    <div class="dropdownContent">
-                      <ul>
-                        <li><a href="">Sports</a></li>
-                        <li><a href="">Clubs</a></li>
-                        <li><a href="">Religious instruction</a></li>
-                      </ul>
-                    </div>
-                  </li>
-                  <li class="navItem">
-                    <a class="navOption" href=""><span>Facilities</span></a>
-                    <div class="dropdownContent">
-                      <ul>
-                        <li><a href="">Library</a></li>
-                        <li><a href="">Tuckshop</a></li>
-                        <li><a href="">Uniform shop</a></li>
-                      </ul>
-                    </div>
-                  </li>
-                  <li class="navItem">
-                    <a class="navOption" href=""
-                      ><span>Calendar and news</span></a
-                    >
-                    <div class="dropdownContent">
-                      <ul>
-                        <li><a href="">Term dates</a></li>
-                        <li><a href="">Events calendar</a></li>
-                        <li><a href="">Sports day</a></li>
-                        <li><a href="">Swimming carnival</a></li>
-                        <li><a href="">News</a></li>
-                        <li><a href="">Newsletters</a></li>
-                      </ul>
-                    </div>
-                  </li>
-                  <li class="navItem">
-                    <a class="navOption" href=""
-                      ><span>Support and resources</span></a
-                    >
-                    <div class="dropdownContent">
-                      <ul>
-                        <li><a href="">Forms and documents</a></li>
-                        <li><a href="">Student resources</a></li>
-                        <li><a href="">Parent resources</a></li>
-                        <li><a href="">Payments</a></li>
-                        <li>
-                          <a href="">Student services and support programs</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </li>
-                  <li class="navItem">
-                    <a class="navOption" href=""><span>Tuckshop</span></a>
-                    <div class="dropdownContent">
-                      <ul>
-                        <li>
-                          <a href="index.html">Specials and new products</a>
-                        </li>
-                        <li><a href="preorder.html">Pre-order</a></li>
-                      </ul>
-                    </div>
-                  </li>
-                </ul>
+      </div>
+      <div class="headerRowTwo">
+        <div class="headerItemsContainer" id="brandHIC">
+          <a href="https://toolooashs.eq.edu.au/" class="homeLink">
+            <div class="brandingContainer">
+              <div class="logoContainer">
+                <img src="images/siteLogo.png" alt="Toolooa State High School logo" />
               </div>
-            </nav>
+              <div class="nameContainer">
+                <div class="title">Toolooa State High School</div>
+                <div class="motto">Education for life</div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="headerItemsContainer" id="searchHIC">
+          <div class="searchContainer">
+            <input type="text" name="search" id="searchInput" placeholder="Enter a search term" />
+            <a onclick="searchWebsite()">
+              <img src="images/searchIcon.png" alt="search" />
+            </a>
           </div>
         </div>
       </div>
-    </header>
-    <div class="mainBody">
-      <div class="productListContainer">
-        <div class="listsContainer" id="specials">
-          <div class="productContainerName">Hot Food</div>
-          <div class="productsList" id="hotFoodParent"></div>
-        </div>
-        <div class="listsContainer" id="priceDrops">
-          <div class="productContainerName">Cold Food</div>
-          <div class="productsList" id="coldFoodParent"></div>
-        </div>
-        <div class="listsContainer" id="newProducts">
-          <div class="productContainerName">Drinks</div>
-          <div class="productsList" id="drinksParent"></div>
-        </div>
-      </div>
-      <div class="orderContainer">
-        <div class="cartDetailsContainer">
-          <div class="cartDetailsHeader">Cart Details</div>
-          <div class="cartDetails">
-            <div class="priceContainer">
-              <p id="priceLabel">Price Total</p>
-              <p id="priceTotal">$0.00</p>
+      <div class="headerRowThree">
+        <div class="headerItemsContainer" id="searchHIC">
+          <nav id="pageNav">
+            <div>
+              <ul id="navList">
+                <li class="navItem">
+                  <a class="navOption" href=""><span>Our school</span></a>
+                  <div class="dropdownContent">
+                    <ul>
+                      <li>
+                        <a href="">Principal's welcome</a>
+                      </li>
+                      <li>
+                        <a href="">History</a>
+                      </li>
+                      <li>
+                        <a href="">Why choose our school?</a>
+                      </li>
+                      <li>
+                        <a href="">Missions and values</a>
+                      </li>
+                      <li>
+                        <a href="">Performance and achievements</a>
+                      </li>
+                      <li>
+                        <a href="">Rules and policies</a>
+                      </li>
+                      <li>
+                        <a href="">Our staff</a>
+                      </li>
+                      <li>
+                        <a href="">Maps and transport</a>
+                      </li>
+                      <li>
+                        <a href="">Class times</a>
+                      </li>
+                      <li>
+                        <a href="">Contact us</a>
+                      </li>
+                      <li>
+                        <a href="">Link and Launch Program</a>
+                      </li>
+                      <li>
+                        <a href="">Remote learning</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="navItem">
+                  <a class="navOption" href=""><span>Enrolments</span></a>
+                  <div class="dropdownContent">
+                    <ul>
+                      <li><a href="">Encrolling at our school</a></li>
+                      <li><a href="">Catchment area</a></li>
+                      <li><a href="">Booklists</a></li>
+                      <li><a href="">Enrolment Forms</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="navItem">
+                  <a class="navOption" href=""><span>Curriculum</span></a>
+                  <div class="dropdownContent">
+                    <ul>
+                      <li><a href="">Subjects and programs</a></li>
+                      <li><a href="">Bring Your Own Device</a></li>
+                      <li><a href="">Junior secondary</a></li>
+                      <li><a href="">Senior secondary</a></li>
+                      <li><a href="">Testing and assessment</a></li>
+                      <li><a href="">Tertiary programs</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="navItem">
+                  <a class="navOption" href=""><span>Extra-curricular</span></a>
+                  <div class="dropdownContent">
+                    <ul>
+                      <li><a href="">Sports</a></li>
+                      <li><a href="">Clubs</a></li>
+                      <li><a href="">Religious instruction</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="navItem">
+                  <a class="navOption" href=""><span>Facilities</span></a>
+                  <div class="dropdownContent">
+                    <ul>
+                      <li><a href="">Library</a></li>
+                      <li><a href="">Tuckshop</a></li>
+                      <li><a href="">Uniform shop</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="navItem">
+                  <a class="navOption" href=""><span>Calendar and news</span></a>
+                  <div class="dropdownContent">
+                    <ul>
+                      <li><a href="">Term dates</a></li>
+                      <li><a href="">Events calendar</a></li>
+                      <li><a href="">Sports day</a></li>
+                      <li><a href="">Swimming carnival</a></li>
+                      <li><a href="">News</a></li>
+                      <li><a href="">Newsletters</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="navItem">
+                  <a class="navOption" href=""><span>Support and resources</span></a>
+                  <div class="dropdownContent">
+                    <ul>
+                      <li><a href="">Forms and documents</a></li>
+                      <li><a href="">Student resources</a></li>
+                      <li><a href="">Parent resources</a></li>
+                      <li><a href="">Payments</a></li>
+                      <li>
+                        <a href="">Student services and support programs</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="navItem">
+                  <a class="navOption" href=""><span>Tuckshop</span></a>
+                  <div class="dropdownContent">
+                    <ul>
+                      <li>
+                        <a href="index.html">Specials and new products</a>
+                      </li>
+                      <li><a href="preorder.html">Pre-order</a></li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
             </div>
-            <div class="itemCountContainer">
-              <div id="cartItemLabel">Items in Cart</div>
-              <div id="cartItemCount">0</div>
-            </div>
-            <div class="clearCartContainer">
-              <button id="clearCartBtn" onclick="clearCart()">
-                Clear <br />
-                Cart
-              </button>
-            </div>
-          </div>
+          </nav>
         </div>
-        <div class="detailsInputContainer">
-          <div class="detailInputHeader">Order Details</div>
-          <input class="nameInput" type="text" placeholder="Student name" />
-          <select id="breakSelect" name="break">
-            <option value="" disabled selected hidden>Select Break</option>
-            <option value="break1">Break 1</option>
-            <option value="break2">Break 2</option>
-            <option value="break3">Break 3</option>
-          </select>
-          <input type="date" name="date" id="dateSelect" />
-        </div>
-        <div class="paymentContainer">payment</div>
-      </div>
-      <div class="cartContainer">
-        <div class="productContainerName">Cart</div>
-        <div id="cartContents"></div>
       </div>
     </div>
-  </body>
+  </header>
+  <div class="mainBody">
+    <div class="productListContainer">
+      <div class="listsContainer" id="specials">
+        <div class="productContainerName">Hot Food</div>
+        <div class="productsList" id="hotFoodParent"></div>
+      </div>
+      <div class="listsContainer" id="priceDrops">
+        <div class="productContainerName">Cold Food</div>
+        <div class="productsList" id="coldFoodParent"></div>
+      </div>
+      <div class="listsContainer" id="newProducts">
+        <div class="productContainerName">Drinks</div>
+        <div class="productsList" id="drinksParent"></div>
+      </div>
+    </div>
+    <div class="orderContainer">
+      <div class="cartDetailsContainer">
+        <div class="cartDetailsHeader">Cart Details</div>
+        <div class="cartDetails">
+          <div class="priceContainer">
+            <p id="priceLabel">Price Total</p>
+            <p id="priceTotal">$0.00</p>
+          </div>
+          <div class="itemCountContainer">
+            <div id="cartItemLabel">Items in Cart</div>
+            <div id="cartItemCount">0</div>
+          </div>
+          <div class="clearCartContainer">
+            <button id="clearCartBtn" onclick="clearCart()">
+              Clear <br />
+              Cart
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="detailsInputContainer">
+        <div class="detailInputHeader">Order Details</div>
+        <input class="nameInput" type="text" placeholder="Student name" />
+        <select id="breakSelect" name="break">
+          <option value="" disabled selected hidden>Select Break</option>
+          <option value="break1">Break 1</option>
+          <option value="break2">Break 2</option>
+          <option value="break3">Break 3</option>
+        </select>
+        <input type="date" name="date" id="dateSelect" />
+      </div>
+      <div class="paymentContainer">payment</div>
+    </div>
+    <div class="cartContainer">
+      <div class="productContainerName">Cart</div>
+      <div id="cartContents"></div>
+    </div>
+  </div>
+</body>
+
 </html>
