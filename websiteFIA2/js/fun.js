@@ -5,5 +5,5 @@ window.addEventListener("DOMContentLoaded", function () {
     () => (growElem.style.transform = `scale(${scaleNum})`),
     10
   );
-  const incrementInterval = setInterval(() => (scaleNum += 0.0006), 10);
+  const incrementInterval = setInterval(() => (scaleNum += 0.0012), 10);
 });

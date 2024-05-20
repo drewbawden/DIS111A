@@ -12,6 +12,7 @@
   <script src="js/productData.js"></script>
   <script src="js/loadProductsPreorder.js"></script>
   <script src="js/cart.js"></script>
+  <script src="js/payment.js"></script>
 </head>
 
 <body>
@@ -222,7 +223,7 @@
         </div>
       </div>
       <div class="detailsInputContainer">
-        <div class="detailInputHeader">Order Details</div>
+        <div class="detailsInputHeader">Order Details</div>
         <input class="nameInput" type="text" placeholder="Student name" />
         <select id="breakSelect" name="break">
           <option value="" disabled selected hidden>Select Break</option>
@@ -232,11 +233,40 @@
         </select>
         <input type="date" name="date" id="dateSelect" />
       </div>
-      <div class="paymentContainer">payment</div>
+      <div class="paymentBtnContainer">
+        <div class="paymentBtnHeader">Payment</div>
+        <button class="paymentBtn" onclick="displayPopup()">Proceed to Payment</button>
+      </div>
     </div>
     <div class="cartContainer">
       <div class="productContainerName">Cart</div>
       <div id="cartContents"></div>
+    </div>
+  </div>
+  <div id="paymentPopupContainer">
+    <div class="closePopupContainer">
+      <button class="closePopup" onclick="closePopup()">X</button>
+    </div>
+    <div class="paymentDetailsContainer">
+      <div id="cardNameRow">
+        <span>Enter your name in reverse</span><br>
+        <input type="text" id="cardNameInput">
+        <span id="cardName"></span>
+      </div>
+      <div id="cardNumberRow">
+        <span>Select your credit card number</span><br>
+        <input type="range" min="1" max="9999999999999999" id="cardNumberSlider"><span id="cardNumber"></span>
+      </div>
+      <div id="cardExpiryRow">
+        <span>Enter the expiry date of your credit card in unix time</span><br>
+        <input type="number" id="cardDateInput"><span id="cardDate"></span>
+      </div>
+      <div id="cardSecurityRow">
+        <span>Find the security code for your credit card</span><br>
+        <button onclick="genCode()">generate</button>
+        <span id="securityCode"></span>
+      </div>
+      <button id="confirmPayment" onclick="alert('No, I don\'t think I will')">Confirm Payment</button>
     </div>
   </div>
 </body>

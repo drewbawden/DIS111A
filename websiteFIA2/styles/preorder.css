@@ -61,7 +61,7 @@
 }
 
 .detailsInputContainer,
-.paymentContainer,
+.paymentBtnContainer,
 .cartDetailsContainer {
   display: flex;
   flex-direction: column;
@@ -69,21 +69,12 @@
   border-radius: 10px;
   width: 100%;
   margin-bottom: 25px;
-}
-
-.cartDetailsContainer {
   background-color: rgb(241, 241, 241);
 }
 
-.detailsInputContainer {
-  background-color: lightgreen;
-}
-
-.paymentContainer {
-  background-color: lightblue;
-}
-
-.cartDetailsHeader {
+.cartDetailsHeader,
+.detailsInputHeader,
+.paymentBtnHeader {
   background-color: rgb(156, 152, 152);
   text-align: center;
   font-size: 22px;
@@ -132,6 +123,67 @@
   border: none;
 }
 
-#clearCartBtn:hover {
+#clearCartBtn:hover,
+.nameInput:hover,
+#breakSelect:hover,
+#dateSelect:hover,
+.paymentBtn:hover {
   background-color: rgb(170, 0, 0);
+}
+
+#clearCartBtn:active,
+.paymentBtn:active {
+  background-color: rgb(190, 0, 0);
+}
+
+.nameInput,
+#breakSelect,
+#dateSelect,
+.paymentBtn {
+  padding: 3px 0;
+  margin: 6px 0;
+  text-align: center;
+  background-color: rgb(128, 0, 0);
+  color: white;
+  border-radius: 5px;
+  min-width: 50%;
+  min-height: 25px;
+  border: none;
+}
+
+.paymentBtn {
+  height: 50px;
+}
+
+#paymentPopupContainer {
+  position: fixed;
+  top: 10vw;
+  left: 30vw;
+  background-color: white;
+  width: 40vw;
+  height: 50vh;
+  border: solid rgb(178, 20, 50) 6px;
+  border-radius: 10px;
+  visibility: hidden;
+}
+
+.closePopup {
+  position: relative;
+  float: right;
+  margin: 3px;
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+}
+
+#cardNameRow,
+#cardNumberRow,
+#cardExpiryRow,
+#cardSecurityRow {
+  margin: 15px 10px;
+}
+
+#confirmPayment {
+  margin-left: 10px;
+  padding: 15px 10px;
 }
