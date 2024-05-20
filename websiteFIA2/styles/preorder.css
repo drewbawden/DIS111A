@@ -1,0 +1,189 @@
+.mainBody {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.productListContainer {
+  width: 60%;
+}
+
+.productContainerName {
+  background-color: rgb(156, 152, 152);
+  text-align: center;
+  font-size: 22px;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.listsContainer {
+  overflow: hidden;
+  text-align: center;
+  background-color: rgb(241, 241, 241);
+  border-radius: 5px;
+  margin: 14px 14px;
+}
+
+.cartContainer {
+  text-align: center;
+  background-color: rgb(241, 241, 241);
+  border-radius: 5px;
+  margin: 14px 14px;
+  width: 12%;
+}
+
+.productsList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#cartContents {
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  align-items: center;
+  scrollbar-color: rgb(186, 72, 72) rgb(166, 166, 166);
+  scrollbar-width: auto;
+}
+
+.orderContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 14px 14px;
+  border-radius: 5px;
+  color: white;
+}
+
+.detailsInputContainer,
+.paymentBtnContainer,
+.cartDetailsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  width: 100%;
+  margin-bottom: 25px;
+  background-color: rgb(241, 241, 241);
+}
+
+.cartDetailsHeader,
+.detailsInputHeader,
+.paymentBtnHeader {
+  background-color: rgb(156, 152, 152);
+  text-align: center;
+  font-size: 22px;
+  padding: 5px 0;
+  color: black;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.cartDetails {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.priceContainer,
+.itemCountContainer,
+.clearCartContainer {
+  padding: 8px 8px;
+  margin: 10px 10px;
+  background-color: rgb(128, 0, 0);
+  border-radius: 5px;
+}
+
+.clearCartContainer {
+  margin: 10px 10px;
+  padding: 0;
+  background-color: rgb(241, 241, 241);
+}
+
+#priceLabel,
+#priceTotal,
+#cartItemLabel,
+#cartItemCount {
+  margin: 3px;
+}
+
+#clearCartBtn {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  padding: 5px 15px;
+  background-color: rgb(128, 0, 0);
+  border-radius: 5px;
+  color: white;
+  border: none;
+}
+
+#clearCartBtn:hover,
+.nameInput:hover,
+#breakSelect:hover,
+#dateSelect:hover,
+.paymentBtn:hover {
+  background-color: rgb(170, 0, 0);
+}
+
+#clearCartBtn:active,
+.paymentBtn:active {
+  background-color: rgb(190, 0, 0);
+}
+
+.nameInput,
+#breakSelect,
+#dateSelect,
+.paymentBtn {
+  padding: 3px 0;
+  margin: 6px 0;
+  text-align: center;
+  background-color: rgb(128, 0, 0);
+  color: white;
+  border-radius: 5px;
+  min-width: 50%;
+  min-height: 25px;
+  border: none;
+}
+
+.paymentBtn {
+  height: 50px;
+}
+
+#paymentPopupContainer {
+  position: fixed;
+  top: 10vw;
+  left: 30vw;
+  background-color: white;
+  width: 40vw;
+  height: 50vh;
+  border: solid rgb(178, 20, 50) 6px;
+  border-radius: 10px;
+  visibility: hidden;
+}
+
+.closePopup {
+  position: relative;
+  float: right;
+  margin: 3px;
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+}
+
+#cardNameRow,
+#cardNumberRow,
+#cardExpiryRow,
+#cardSecurityRow {
+  margin: 15px 10px;
+}
+
+#confirmPayment {
+  margin-left: 10px;
+  padding: 15px 10px;
+}
